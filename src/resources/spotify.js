@@ -8,6 +8,9 @@ export const spotifyServiceFactory = ({ httpClient }) => ({
       .then(({ data }) => data);
   },
   albums(id) {
-    return httpClient.get(`/albums/${id}`).then(({ data }) => data);
+    return httpClient
+      .get(`/albums/${id}`)
+      .then(responseHandler)
+      .then(({ data }) => data);
   }
 });
