@@ -1,4 +1,5 @@
 import axios from "axios";
+import auth from "./auth";
 
 export const DEFAULT_QUERY_STRING = Object.freeze({ page: 0, size: 20 });
 
